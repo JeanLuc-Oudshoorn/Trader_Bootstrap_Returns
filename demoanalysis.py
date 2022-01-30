@@ -22,3 +22,4 @@ for i in range(len(popreturn.columns)):
 
 print(fits)
 
+fits
