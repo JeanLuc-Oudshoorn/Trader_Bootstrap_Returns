@@ -46,7 +46,7 @@ l = len(popreturn['jeppe'].dropna())
 l1 = len(popreturn['sp'].dropna())
 
 for i in range(100000):
-    sample = np.random.choice(popreturn['jeppe'].dropna(), size=l, replace=True)
+    sample = np.random.choice(popreturn['jeppe'].dropna().loc[lambda x: x < 0.3], size=l, replace=True)
     sample1 = np.random.choice(popreturn['sp'].dropna(), size=l1, replace=True)
     means.append(np.mean(sample))
     means1.append(np.mean(sample1))
